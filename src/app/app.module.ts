@@ -4,16 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component/home.component';
+import { NavbarComponent } from './components/navbar.component/navbar.component';
+import { SkillsComponent } from './components/skills.component/skills.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
+  { path: '', redirectTo: '/hello', pathMatch: 'full' },
+  { path: 'skills', component: SkillsComponent, data: { title: 'skills' } }
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    SkillsComponent
   ],
   imports: [
     RouterModule.forRoot(
