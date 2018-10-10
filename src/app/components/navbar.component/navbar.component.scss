@@ -1,0 +1,32 @@
+.bg-dark{
+    h1{
+        color: #fff;
+    }
+
+    
+}
+
+
+
+.navbar{
+    padding:0px;
+
+    
+}
+
+#index{
+    padding-top: 10px;
+    padding-left: 30px;
+    margin: 0px;
+}
+
+.animate{
+    animation-name: head;
+    animation-duration: 1s;
+}
+
+
+@keyframes head {
+    0% {padding-left: 60px; opacity:0;}
+    100% {padding-left: 30px; opacity:1;}
+}

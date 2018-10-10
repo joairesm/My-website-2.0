@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { globalEventManager } from 'src/app/services/globalEventManager.service';
 
 @Component({
     selector: 'skills-component',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-    constructor() { }
+    
+    constructor(private gEM: globalEventManager) { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void { 
+        this.gEM.changeTitle('Skills');
+    }
 }

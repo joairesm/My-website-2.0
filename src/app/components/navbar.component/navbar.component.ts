@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { globalEventManager } from 'src/app/services/globalEventManager.service';
 
 @Component({
     selector: 'navbar-component',
@@ -6,7 +7,26 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-    constructor() { }
+    @ViewChild('animatedTitle') aTitle: ElementRef;
 
-    ngOnInit(): void { }
+    title : any;
+    className: string = '';
+
+    constructor(private gEM: globalEventManager) { }
+
+    ngOnInit() {
+        this.gEM.change.subscribe(newTitle => {
+            this.title = newTitle;
+            this.setClassName('animate');
+        });
+    }
+
+    setClassName(newClass) {
+        this.className = newClass
+    
+        setTimeout(() => {
+            this.className = "";
+          }, 1000);
+    }
+
 }
