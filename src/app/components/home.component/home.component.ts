@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { globalEventManager } from 'src/app/services/globalEventManager.service';
+import { globalEventManager } from '../../services/globalEventManager.service';
 
 @Component({
     selector: 'home-component',
@@ -11,6 +11,6 @@ export class HomeComponent implements OnInit {
     constructor(private gEM: globalEventManager) { }
 
     ngOnInit(): void { 
-        this.gEM.changeTitle('Hello');
+        this.gEM.changeTitle('hello');
     }
 }

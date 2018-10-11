@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.animate{
+    animation-name: head;
+    animation-duration: 0.5s;
+}
+
+@keyframes head {
+    0% {padding-left: 30px; opacity:0;}
+    100% {padding-left: 0px; opacity:1;}
+}
+
+.shadow-bottom {
+    box-shadow: 0 8px 15px -10px black;
+}
+
+.bg-dark{
+    h1{
+        color: #fff;
+    }
+}

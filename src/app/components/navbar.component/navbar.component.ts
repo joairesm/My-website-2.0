@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { globalEventManager } from 'src/app/services/globalEventManager.service';
+import { globalEventManager } from '../../services/globalEventManager.service';
 
 @Component({
     selector: 'navbar-component',
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     
         setTimeout(() => {
             this.className = "";
-          }, 1000);
+          }, 500);
     }
 
 }
