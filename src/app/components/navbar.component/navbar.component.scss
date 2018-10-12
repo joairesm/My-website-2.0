@@ -35,12 +35,15 @@ $animation-time: 0.5s;
     }
 
     .my-controls{
-        display:inline-block;
         text-align:center;
         float: right;
 
         margin-top: 20px;
         margin-right: 20px;
+
+        .fas{
+            margin-top: 4px;
+        }
 
         .fa-moon{
             display:block;
@@ -48,13 +51,11 @@ $animation-time: 0.5s;
         }
         .toggle-buttom{
             width: 75px;
-            margin-top: 4px;
             display:inline-block;
         }
         .fa-sun{
             display:block;
             float:right;
-            display:inline-block;
         }
     }
 
@@ -74,7 +75,7 @@ $animation-time: 0.5s;
 
     .my-controls{
         width: 75px;
-        .far{
+        .fas{
             visibility: collapse;
             width: 0px;
         }
@@ -89,7 +90,7 @@ $animation-time: 0.5s;
     
     .my-controls{
         width: 75px;
-        .far{
+        .fas{
             visibility: collapse;
             width: 0px;
         }
@@ -100,7 +101,7 @@ $animation-time: 0.5s;
 @media (min-width: 768px) { 
     
     .my-controls{
-        width:180px;
+        width:120px;
     }
 
 }
@@ -118,26 +119,26 @@ $animation-time: 0.5s;
         border-color:white;
     }
 
-    .far{
-        color: white;
+    .fas{
+        color: lightgray;
     }
 }
 
 
 .light-theme{
-    background-color: white;
+    background-color: rgb(231, 231, 231);
 
     h1{
         color: #343a40;
     }
     .navbar{
-        border-color:#343a40;
+        border-color:darkgrey;
     }
     .active{
-        border-color:white;
+        border-color:rgb(231, 231, 231);;
     }
 
-    .far{
-        color: #343a40;
+    .fas{
+        color: grey;
     }
 }

@@ -15,7 +15,8 @@ export class NavbarComponent implements OnInit {
     lighttheme: boolean;
 
     constructor(private gEM: globalEventManager) {
-        this.themeTochoose = this.setThemebyTime((new Date()).getHours());
+        this.lighttheme = this.setThemebyTime((new Date()).getHours());
+        this.gEM.changeTheme(this.lighttheme);
      }
 
     ngOnInit() {
@@ -35,17 +36,16 @@ export class NavbarComponent implements OnInit {
 
     onToggleChange(result:boolean){
         this.lighttheme = result;
+        this.gEM.changeTheme(result);
     }
 
-    setThemebyTime(time:number):string{
-        if(time > 8 && time < 20){
-            this.lighttheme = true;
-            return 'light';
-        }
-        else{
-            this.lighttheme = false;
-            return 'dark';
-        }
+    setThemebyTime(time:number):boolean{
+        if(time > 8 && time < 20)
+            return true;
+        
+        else
+            return false;
+        
     }
 
 }

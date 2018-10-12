@@ -8,9 +8,16 @@ import { globalEventManager } from '../../services/globalEventManager.service';
 })
 export class SkillsComponent implements OnInit {
     
-    constructor(private gEM: globalEventManager) { }
+    lighttheme: boolean;
+
+    constructor(private gEM: globalEventManager) { 
+        this.lighttheme = gEM.lighttheme;
+    }
 
     ngOnInit(): void { 
         this.gEM.changeTitle('skills');
+        this.gEM.changeThemeEmitter.subscribe(newTheme => {
+            this.lighttheme = newTheme;
+        });
     }
 }
