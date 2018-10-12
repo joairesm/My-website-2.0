@@ -33,6 +33,10 @@ export class NavbarComponent implements OnInit {
           }, 500);
     }
 
+    onToggleChange(result:boolean){
+        console.log(result);
+    }
+
     setThemebyTime(time:number):string{
         if(time > 8 && time < 20)
             return 'light';

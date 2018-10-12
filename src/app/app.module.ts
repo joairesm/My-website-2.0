@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component/home.component';
 import { NavbarComponent } from './components/navbar.component/navbar.component';
 import { SkillsComponent } from './components/skills.component/skills.component';
+import { ToggleButtonComponent } from './components/togglebutton.component/togglebutton.component';
 
 import { globalEventManager } from './services/globalEventManager.service';
 
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    SkillsComponent
+    SkillsComponent,
+    ToggleButtonComponent
   ],
   imports: [
     RouterModule.forRoot(

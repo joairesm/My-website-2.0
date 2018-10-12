@@ -1,0 +1,76 @@
+@mixin animate($duration) {
+    -webkit-transition: all $duration ease-in-out;
+    -moz-transition: all $duration ease-in-out;
+    -o-transition: all $duration ease-in-out;
+    -ms-transition: all $duration ease-in-out;
+    transition: all $duration ease-in-out;
+}
+
+.toggle {
+    text-align: center;
+    position: relative;
+    height: 24px;
+    width: 75px;
+    border: white solid 1px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer; 
+
+    .circle{
+        position: absolute;
+        top: 0px;
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .text{
+        position: absolute;
+        top: 0px;
+    }
+
+}
+
+.toggle-on{
+    background-color: lightgray;
+    .circle{
+        left: 51px;
+        @include animate(0.1s);
+    }
+    .text{
+        left: 10px;
+        color:  rgb(80, 80, 80);
+    }
+}
+
+.toggle-off{
+    background-color: rgb(100, 100, 100);
+    color: #fff !important;
+    .circle{
+        left: 0px;
+        @include animate(0.1s);
+    }
+    .text{
+        right: 10px;
+        color: white;
+    }
+}
+
+.inner-shadow{
+    -webkit-box-shadow: inset 1px 1px 10px #333;
+    -moz-box-shadow:    inset 1px 1px 10px #333;
+    box-shadow:         inset 1px 1px 10px #333;
+}
+
+.collapsed{
+    visibility: collapse;
+    opacity: 0;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    @include animate(0.5s);
+    animation-delay: 0.1s;
+}
