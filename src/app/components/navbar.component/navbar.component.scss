@@ -9,7 +9,6 @@ $animation-time: 0.5s;
         padding:0px;
         border-style: solid;
         border-width: 0px 0px 0.5px 0px;
-        border-color:black;
 
         a{
             padding: 0px 8px;
@@ -18,7 +17,6 @@ $animation-time: 0.5s;
         .active{
             border-style: solid;
             border-width: 0px 0px 0.5px 0px;
-            border-color:white;
         }
     }
 
@@ -43,10 +41,7 @@ $animation-time: 0.5s;
 
         margin-top: 20px;
         margin-right: 20px;
-    
-        .far{
-            color: white;
-        }
+
         .fa-moon{
             display:block;
             float:left;
@@ -110,3 +105,39 @@ $animation-time: 0.5s;
 
 }
 
+.dark-theme{
+    background-color: #343a40;
+
+    h1{
+        color: #fff;
+    }
+    .navbar{
+        border-color:black;
+    }
+    .active{
+        border-color:white;
+    }
+
+    .far{
+        color: white;
+    }
+}
+
+
+.light-theme{
+    background-color: white;
+
+    h1{
+        color: #343a40;
+    }
+    .navbar{
+        border-color:#343a40;
+    }
+    .active{
+        border-color:white;
+    }
+
+    .far{
+        color: #343a40;
+    }
+}

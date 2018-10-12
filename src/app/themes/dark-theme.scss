@@ -1,0 +1,19 @@
+
+
+@mixin my-padding-mixin() {
+    background-color: #343a40;
+
+    h1{
+        color: #fff;
+    }
+    .navbar{
+        border-color:black;
+    }
+    .active{
+        border-color:white;
+    }
+
+    .far{
+        color: white;
+    }
+  }
