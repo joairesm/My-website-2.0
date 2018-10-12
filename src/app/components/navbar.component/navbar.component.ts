@@ -11,11 +11,15 @@ export class NavbarComponent implements OnInit {
 
     title : any;
     className: string = '';
+    themeTochoose: string;
 
-    constructor(private gEM: globalEventManager) { }
+    constructor(private gEM: globalEventManager) {
+        this.themeTochoose = this.setThemebyTime((new Date()).getHours());
+        console.log(this.themeTochoose)
+     }
 
     ngOnInit() {
-        this.gEM.change.subscribe(newTitle => {
+        this.gEM.changeTitleEmitter.subscribe(newTitle => {
             this.title = newTitle;
             this.setClassName('animate');
         });
@@ -27,6 +31,13 @@ export class NavbarComponent implements OnInit {
         setTimeout(() => {
             this.className = "";
           }, 500);
+    }
+
+    setThemebyTime(time:number):string{
+        if(time > 8 && time < 20)
+            return 'light';
+        else
+            return 'dark';
     }
 
 }

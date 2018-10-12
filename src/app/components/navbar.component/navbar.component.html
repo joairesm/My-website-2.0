@@ -1,12 +1,10 @@
-<div class="bg-dark">
+<div id="navbar" class="bg-dark fixed-top">
     <div id="index" [ngClass]="{'shadow-bottom': false}" >
         <h1 [ngClass]="className">{{title}}</h1>
     </div>
-
-    <nav class="navbar navbar-expand navbar-dark bg-dark navbar-fixed-top">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class=" navbar-collapse justify-content-center">
             <ul class="navbar-nav">
-
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/hello" routerLinkActive="active">hello</a>
                 </li>
@@ -14,12 +12,11 @@
                     <a class="nav-link" routerLink="/skills" routerLinkActive="active">skills</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled" >contact</a>
+                    <a class="nav-link disabled" >contact</a>
                 </li>
-            
             </ul>
         </div>
     </nav>
-
-
 </div>
+
+<div id="navbar-compensation"></div>

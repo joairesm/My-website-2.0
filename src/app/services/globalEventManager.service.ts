@@ -6,12 +6,16 @@ import { Injectable, Output, EventEmitter } from "@angular/core";
 export class globalEventManager {
 
 
-  @Output() change: EventEmitter<string> = new EventEmitter();
-
+  @Output() changeTitleEmitter: EventEmitter<string> = new EventEmitter();
+  @Output() changeThemeEmitter: EventEmitter<string> = new EventEmitter();
 
 
   changeTitle(newTitle: string) { 
-    this.change.emit(newTitle)
+    this.changeTitleEmitter.emit(newTitle)
+  }
+
+  changeTheme(newThemeName: string){
+    this.changeThemeEmitter.emit(newThemeName)
   }
 
 }

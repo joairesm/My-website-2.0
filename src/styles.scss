@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+$selected-font : 'Fira Sans', sans-serif;
+
+body{
+    font-family: $selected-font;
+}
+
+
 .animate{
     animation-name: head;
     animation-duration: 0.5s;
