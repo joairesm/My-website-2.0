@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { JsonpModule, HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component/home.component';
@@ -11,6 +11,8 @@ import { SkillsComponent } from './components/skills.component/skills.component'
 import { ToggleButtonComponent } from './components/togglebutton.component/togglebutton.component';
 
 import { globalEventManager } from './services/globalEventManager.service';
+import { InstagramService } from './services/instagram.service';
+import { SpotifyService } from './services/spotify.service';
 
 const appRoutes: Routes = [
   { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
@@ -34,9 +36,15 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only (was true by default)
     ),
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    JsonpModule,
+    HttpModule
   ],
-  providers: [globalEventManager],
+  providers: [
+    globalEventManager,
+    InstagramService,
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

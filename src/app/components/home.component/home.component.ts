@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { globalEventManager } from '../../services/globalEventManager.service';
+import { InstagramService } from '../../services/instagram.service';
+import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
     selector: 'home-component',
@@ -9,10 +11,21 @@ import { globalEventManager } from '../../services/globalEventManager.service';
 export class HomeComponent implements OnInit {
 
     lighttheme: boolean;
+    posts: any[];
+    music: any[];
     
-    constructor(private gEM: globalEventManager) {         
+    constructor(
+        private gEM: globalEventManager, 
+        private _instagramService: InstagramService,
+        private _spotifyService: SpotifyService) { 
+
         this.lighttheme = gEM.lighttheme;
+        
+        this.getmusic();
+        this.getphotos();
     }
+
+
 
     ngOnInit(): void { 
         this.gEM.changeTitle('hello');
@@ -20,4 +33,27 @@ export class HomeComponent implements OnInit {
             this.lighttheme = newTheme;
         });
     }
+
+    getmusic(){
+        this._spotifyService.getMusic()
+        .subscribe(
+        (data) => {
+            this.music = data;
+        },
+        (error) => {
+            console.log(error);
+        });
+    }
+
+    getphotos(){
+        this._instagramService.getFotos()
+        .subscribe(
+        (data) => {
+            this.posts = data.data;
+        },
+        (error) => {
+            console.log(error);
+        });
+    }
+
 }
