@@ -2,8 +2,27 @@
     <div class="animate">
         
         <div class="container">
+            <div class="content">
 
-            <h1>hello</h1>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <h1>hello</h1>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+
+                        <div *ngIf="photos?.length > 0">
+                                <img src="{{photos[0].images.low_resolution.url}}">
+                        </div>
+
+                        <div  *ngIf="photos?.length > 0">
+                                <img src="{{music.items[0].track.album.images[0].url}}">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

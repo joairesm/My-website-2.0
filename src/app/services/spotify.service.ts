@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import {Jsonp} from '@angular/http';
 import { map } from "rxjs/operators";
 import { Model } from './../models/model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class SpotifyService {
 
     private requestUrl: string;
-    
+    private result: Observable<any>;
+    public cache: any;
     constructor(private _jsonp: Jsonp) {}
 
     getMusic() {
@@ -16,6 +18,6 @@ export class SpotifyService {
         + model.sec_code;
 
         return this._jsonp.request(this.requestUrl)
-        .pipe(map(res => res.json()));
+            .pipe(map(res => res.json()));
     }
 }

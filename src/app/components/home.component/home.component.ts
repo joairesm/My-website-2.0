@@ -11,7 +11,7 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
 
     lighttheme: boolean;
-    posts: any[];
+    photos: any[];
     music: any[];
     
     constructor(
@@ -24,9 +24,7 @@ export class HomeComponent implements OnInit {
         this.getmusic();
         this.getphotos();
     }
-
-
-
+    
     ngOnInit(): void { 
         this.gEM.changeTitle('hello');
         this.gEM.changeThemeEmitter.subscribe(newTheme => {
@@ -35,10 +33,15 @@ export class HomeComponent implements OnInit {
     }
 
     getmusic(){
+        if(this._spotifyService.cache != null){
+            this.music = this._spotifyService.cache;
+            return;
+        }
         this._spotifyService.getMusic()
         .subscribe(
         (data) => {
             this.music = data;
+            this._spotifyService.cache = this.music;
         },
         (error) => {
             console.log(error);
@@ -46,10 +49,15 @@ export class HomeComponent implements OnInit {
     }
 
     getphotos(){
+        if(this._instagramService.cache != null){
+            this.photos = this._instagramService.cache;
+            return;
+        }
         this._instagramService.getFotos()
         .subscribe(
         (data) => {
-            this.posts = data.data;
+            this.photos = data.data;
+            this._instagramService.cache = this.photos;
         },
         (error) => {
             console.log(error);

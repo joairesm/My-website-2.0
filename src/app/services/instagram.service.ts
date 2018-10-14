@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import {Jsonp} from '@angular/http';
 import { map } from "rxjs/operators";
 import { Model } from './../models/model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class InstagramService {
 
     private requestUrl: string;
+    public cache: any;
     
     constructor(private _jsonp: Jsonp) {}
 
@@ -17,6 +19,7 @@ export class InstagramService {
 
         return this._jsonp.request(this.requestUrl)
         .pipe(map(res => res.json()));
+        
     }
 
 }
