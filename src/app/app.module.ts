@@ -3,13 +3,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component/home.component';
 import { NavbarComponent } from './components/navbar.component/navbar.component';
 import { SkillsComponent } from './components/skills.component/skills.component';
 import { ToggleButtonComponent } from './components/togglebutton.component/togglebutton.component';
-
 import { globalEventManager } from './services/globalEventManager.service';
 import { InstagramService } from './services/instagram.service';
 import { SpotifyService } from './services/spotify.service';
@@ -37,7 +36,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [
     globalEventManager,

@@ -3,7 +3,24 @@
         
         <div class="container">
 
-            <h1>skills</h1>
+            <div class="row">
+                <div class="col-md-2 col-xs-12"></div>
+                <div class="col-md-10 col xs-12">
+                        <div class="barChart" >
+                                <canvas baseChart
+                                        [datasets]="radarChartData"
+                                        [options]="radarChartOptions"
+                                        [labels]="radarChartLabels"
+                                        [chartType]="radarChartType"
+                                        [colors] = "radarChartColors"
+                                        (chartHover)="chartHovered($event)"
+                                        (chartClick)="chartClicked($event)">
+                                </canvas>
+                        </div>
+                </div>
+            </div>
+
+            
         </div>
     </div>
 </div>

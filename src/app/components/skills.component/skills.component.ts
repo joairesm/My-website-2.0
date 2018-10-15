@@ -20,4 +20,38 @@ export class SkillsComponent implements OnInit {
             this.lighttheme = newTheme;
         });
     }
+
+    // Radar
+    public radarChartLabels: string[] = ['Angular',
+    '.NET', 'NODE.js', 'WPF', 'MVC', 'jQuery'];
+
+    public radarChartColors: Array<any> = [
+    {
+        borderColor: 'rgba(148,159,177,1)',
+        pointBackgroundColor: 'rgba(148,159,177,1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    }
+    ];
+
+    public radarChartOptions:  any = {
+    legend: { display: false},
+    scale: {
+        pointLabels: {
+            fontSize: 14
+        },
+        ticks: {
+            display: false,
+            beginAtZero: true,
+            max: 10
+        },
+    }
+    };
+
+    public radarChartData: any = [
+    {data: [7, 6, 5, 7, 8, 9], label: 'Frameworks: '}
+    ];
+    public radarChartType = 'radar';
+
 }
