@@ -9,6 +9,7 @@
                     <div class="col-md-6 col-xs-12">
 
                         <div *ngIf="photos?.data.length > 0">
+                            <h2>my last instagram picture</h2>
                             <div class="activity-card">
                                 <img src="{{photos?.data[0].images.standard_resolution.url}}">
                                 <div class="activity-description">
@@ -20,7 +21,10 @@
                         </div>
 
                         <br>
+                        <hr>
+                        <br>
                         <div *ngIf="music?.items.length > 0" >
+                                <h2>my last song on spotify</h2>
                             <div class="activity-card">
                                 <img src="{{music?.items[0].track.album.images[0].url}}">
                                 <div class="activity-description">

@@ -7,6 +7,11 @@ body{
     font-family: $selected-font;
 }
 
+h2{
+    font-size: 12px;
+    opacity: 0.7;
+}
+
 
 .animate{
     animation-name: head;
