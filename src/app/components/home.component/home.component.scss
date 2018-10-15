@@ -1,5 +1,75 @@
+$quare-size: 250px;
+$animation-time: 0.5s;
+
 .container{
-    height: 2000px;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    text-align: center;
+
+    .activity-card{
+        margin: auto;
+        width: $quare-size;
+        height: $quare-size;
+        overflow: hidden;
+
+        &:active{
+            .activity-description{
+                height: $quare-size/2;
+                margin-top: -1* $quare-size/2;
+                animation-name: example;
+                animation-duration: 0.5s;
+            }
+        }
+
+        &:hover{
+            img{
+                opacity: 0.3;
+                animation-name: img-animation;
+                animation-duration: $animation-time;
+            }
+            .activity-description{
+                height: $quare-size/2;
+                margin-top: -1* $quare-size/2;
+                animation-name: description-animation;
+                animation-duration: $animation-time;
+            }
+        }
+
+        @keyframes description-animation {
+            from {  height: 0;
+                    margin-top: 0; }
+            to {    height: $quare-size/2;
+                    margin-top: -1* $quare-size/2;}  
+        }
+        @keyframes img-animation {
+            from { opacity: 1;}
+            to { opacity: 0.3;}  
+        }
+
+        img{
+            height: $quare-size;
+            width: $quare-size;
+        }
+        .activity-description{
+            height: 0;
+            width: $quare-size;
+            -webkit-box-align:center;
+            -webkit-box-pack:center;
+            display:-webkit-box;
+
+            .text-box{
+                line-height: 100%;
+                font-size: 12px;
+                font-style: italic;
+                text-align: left;
+                .weak{
+                    font-size: 8px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
 }
 
 .dark-theme{
@@ -7,6 +77,18 @@
 
     h1{
         color: #fff;
+    }
+
+    .activity-card{
+        img{
+            border-radius: 3px;
+        }
+        .activity-description{
+            .text-box{
+                background-color: #343a40 !important;
+                color: white;
+            }
+        }
     }
 }
 
