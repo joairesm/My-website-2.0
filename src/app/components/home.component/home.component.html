@@ -8,35 +8,38 @@
                     </div>
                     <div class="col-md-6 col-xs-12">
 
-                        <div *ngIf="photos?.data.length > 0">
-                            <h2>my last instagram picture</h2>
-                            <div class="activity-card">
-                                <img src="{{photos?.data[0].images.standard_resolution.url}}">
-                                <div class="activity-description">
-                                    <div class="text-box">
-                                        <span class="weak">caption </span>"{{photos?.data[0].caption.text}}"
+                        <div class="posts-wrapper animate" *ngIf="music?.items.length > 0 &&  photos?.data.length > 0" >
+                            
+
+                            <div *ngIf="photos?.data.length > 0">
+                                <h2>my last instagram picture</h2>
+                                <div class="activity-card">
+                                    <img src="{{photos?.data[0].images.standard_resolution.url}}">
+                                    <div class="activity-description">
+                                        <div class="text-box">
+                                            <span class="weak">caption </span>"{{photos?.data[0].caption.text}}"
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <br>
-                        <hr>
-                        <br>
-                        <div *ngIf="music?.items.length > 0" >
-                                <h2>my last song on spotify</h2>
-                            <div class="activity-card">
-                                <img src="{{music?.items[0].track.album.images[0].url}}">
-                                <div class="activity-description">
-                                    <div class="text-box">
-                                        {{music?.items[0].track.name}} <br>
-                                        <span class="weak">by</span> {{music?.items[0].track.artists[0].name}} <br>
-                                        <span class="weak">from</span>  {{music?.items[0].track.album.name}}
+                            <br>
+                            <hr>
+                            <br>
+                            <div *ngIf="music?.items.length > 0" >
+                                    <h2>my last song on spotify</h2>
+                                <div class="activity-card">
+                                    <img src="{{music?.items[0].track.album.images[0].url}}">
+                                    <div class="activity-description">
+                                        <div class="text-box">
+                                            {{music?.items[0].track.name}} <br>
+                                            <span class="weak">by</span> {{music?.items[0].track.artists[0].name}} <br>
+                                            <span class="weak">from</span>  {{music?.items[0].track.album.name}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
 
                     </div>
                 </div>

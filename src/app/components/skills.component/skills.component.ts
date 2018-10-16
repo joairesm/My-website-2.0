@@ -32,25 +32,34 @@ export class SkillsComponent implements OnInit {
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+        //backgroundColor: 'rgba(225,10,24,0.2)'
     }
     ];
 
     public radarChartOptions:  any = {
-    legend: { display: false},
-    scale: {
+        tooltips: {
+            enabled: false
+        },
+        legend: { 
+            display: false
+            },
         pointLabels: {
-            fontSize: 14
+            fontColor: 'white'
         },
-        ticks: {
-            display: false,
-            beginAtZero: true,
-            max: 10
-        },
-    }
+        scale: {
+            pointLabels: {
+                fontSize: 14
+            },
+            ticks: {
+                display: false,
+                beginAtZero: true,
+                max: 10
+            },
+        }
     };
 
     public radarChartData: any = [
-    {data: [7, 6, 5, 7, 8, 9], label: 'Frameworks: '}
+    {data: [7, 6, 5, 7, 8, 9]}
     ];
     public radarChartType = 'radar';
 

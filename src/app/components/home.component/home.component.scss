@@ -7,6 +7,10 @@ $animation-time: 0.5s;
     padding-bottom: 50px;
     text-align: center;
 
+    h2{
+        opacity: 0.5;
+    }
+
     hr{
         display: block;
         margin-top: 0.5em;
@@ -35,7 +39,7 @@ $animation-time: 0.5s;
 
         &:hover{
             img{
-                opacity: 0.3;
+                opacity: 0.25;
                 animation-name: img-animation;
                 animation-duration: $animation-time;
             }
@@ -55,7 +59,7 @@ $animation-time: 0.5s;
         }
         @keyframes img-animation {
             from { opacity: 1;}
-            to { opacity: 0.3;}  
+            to { opacity: 0.25;}  
         }
 
         img{
