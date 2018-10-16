@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Model } from './../models/model';
 
 @Injectable()
-export class InstagramService {
+export class TwitterService {
 
     private requestUrl: string;
     constructor(private _http: HttpClient) {}
 
-    getPhotos() {
+    getTweets() {
         var model = new Model();
-        this.requestUrl = 'https://myawesomeapi-7d029.firebaseapp.com/instagram/latest?sec_code=' 
+        this.requestUrl = 'https://myawesomeapi-7d029.firebaseapp.com/twitter/latest?sec_code=' 
         + model.sec_code;
         return this._http.get(this.requestUrl);
     }

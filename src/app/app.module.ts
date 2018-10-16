@@ -13,6 +13,7 @@ import { ToggleButtonComponent } from './components/togglebutton.component/toggl
 import { globalEventManager } from './services/globalEventManager.service';
 import { InstagramService } from './services/instagram.service';
 import { SpotifyService } from './services/spotify.service';
+import { TwitterService } from './services/twitter.service';
 
 const appRoutes: Routes = [
   { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
   providers: [
     globalEventManager,
     InstagramService,
-    SpotifyService
+    SpotifyService,
+    TwitterService
   ],
   bootstrap: [AppComponent]
 })
