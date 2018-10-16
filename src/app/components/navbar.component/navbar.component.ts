@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { globalEventManager } from '../../services/globalEventManager.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { globalEventManager } from '../../services/globalEventManager.service';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewInit {
     @ViewChild('animatedTitle') aTitle: ElementRef;
 
     title : any;
@@ -14,7 +14,8 @@ export class NavbarComponent implements OnInit {
     themeTochoose: string;
     lighttheme: boolean;
 
-    constructor(private gEM: globalEventManager) {
+    constructor(private gEM: globalEventManager,
+                private elementRef: ElementRef) {
         this.lighttheme = this.setThemebyTime((new Date()).getHours());
         this.gEM.changeTheme(this.lighttheme);
      }
@@ -24,6 +25,10 @@ export class NavbarComponent implements OnInit {
             this.title = newTitle;
             this.setClassName('animate');
         });
+    }
+
+    ngAfterViewInit(){
+        this.changeBodyColor(this.lighttheme);
     }
 
     setClassName(newClass) {
@@ -37,6 +42,7 @@ export class NavbarComponent implements OnInit {
     onToggleChange(result:boolean){
         this.lighttheme = result;
         this.gEM.changeTheme(result);
+        this.changeBodyColor(result);
     }
 
     setThemebyTime(time:number):boolean{
@@ -46,6 +52,24 @@ export class NavbarComponent implements OnInit {
         else
             return false;
         
+    }
+
+    bodyBackground(lightTheme:boolean):string{
+        if(lightTheme)
+            return 'rgb(231, 231, 231)'
+        else
+            return '#343a40';
+    }
+
+    changeBodyColor(lightTheme:boolean){
+        var newcolor = lightTheme ? 'rgb(231, 231, 231)' : '#343a40';
+
+        this.elementRef
+            .nativeElement
+            .ownerDocument
+            .body
+            .style
+            .backgroundColor = this.bodyBackground(this.lighttheme);
     }
 
 }

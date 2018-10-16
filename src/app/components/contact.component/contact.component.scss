@@ -1,0 +1,130 @@
+$dark-color: #343a40;
+$light-color: rgb(231, 231, 231);
+
+.content{
+    text-align: center;
+
+    .section{
+        height:550px;
+        line-height: 550px;
+
+        .in-center{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 18px; /* <-- adjust this */
+        }
+
+    }
+}
+
+.fab{
+    color: black;
+    margin: 25px;
+    margin-top: 10px;
+}
+
+.simple-button{
+    border-radius: 3px;
+    background:transparent;
+    opacity: 0.75;
+    font-size: 17px;
+    padding: 10px;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+
+.dark-theme{
+    background-color: #343a40;
+
+    h1,h2{
+        color: #fff;
+    }
+
+
+    .fab{
+        color:white;
+    }
+
+    .simple-button{
+        border: 0.5px solid #ffffff80;
+        color: #fff;
+    
+        &:hover, &:active{
+            background-color: #fff; 
+            color: #343a40;
+            border: 0px;
+        }
+
+    }
+
+    .fab{
+        opacity: 0.7;
+
+        &:hover, &:active{
+            opacity: 0.9;  
+        }
+    }
+
+}
+
+
+.light-theme{
+    background-color: rgb(231, 231, 231);
+
+    h1,h2{
+        color: #343a40;
+    }
+
+    .simple-button{
+        border: 0.5px solid #343a4080;
+        color: #343a40;
+    
+        &:hover, &:active{
+            background-color: #343a40; 
+            color: rgb(231, 231, 231);
+            border: 0px;
+        }
+    
+    }
+    
+    @mixin change-to($some-color) {
+        opacity: 0.7;
+
+        &:hover{
+            opacity: 0.9;  
+            color: $some-color;
+        }
+
+        &:active{
+            opacity: 0.9;
+            color: $some-color;
+        }
+    }
+
+    .fa-github{
+        @include change-to(#9f7be1);
+    }
+
+    .fa-linkedin{
+        @include change-to(#4875B4);
+    }
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+    .section{
+        height:300px !important;
+        line-height: 300px!important;
+
+        .in-center{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 18px; /* <-- adjust this */
+        }
+
+    }
+}

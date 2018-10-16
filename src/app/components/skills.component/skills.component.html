@@ -4,11 +4,39 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-2 col-xs-12">
+                <div class="col-md-3 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
+                 <div class="p-languages">
+                     <div class="hide-when-large">
+                        <br>
+                        <br>
+                        <br>
+                     </div>
                     <h2>Programming Languages</h2>
+                    <br>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-6 col-6">
+                                <span>TypeScript</span>
+                                <hr>
+                                <span>JavaScript</span>
+                                <hr>
+                                <span>C#</span>
+                                <hr class="hide-when-small">
+                            </div>
+                            <div class="col-md-12 col-sm-6 col-6">
+                                <span>XAML</span>
+                                <hr>
+                                <span>HTML</span>
+                                <hr>
+                                <span>SASS</span>
+                            </div>
+                        </div>
                     
+                 </div>
                 </div>
-                <div class="col-md-10 col xs-12">
+
+                <div class="col-md-9 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
+                    <h2>Frameworks</h2>
+                    <br>
                         <div class="barChart" >
                                 <canvas baseChart
                                         [datasets]="radarChartData"

@@ -29,7 +29,11 @@ h2{
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
-
+    .hide-when-small{
+        height: 0px;
+        width: 0px;
+        visibility: collapse;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -37,12 +41,23 @@ h2{
     h1{
         font-size: 48px;
     }
+    .hide-when-small{
+        height: 0px;
+        width: 0px;
+        visibility: collapse;
+    }
  }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     h1{
         font-size: 72px;
+    }
+
+    .hide-when-large{
+        height: 0px;
+        width: 0px;
+        visibility: collapse;
     }
 }
 
