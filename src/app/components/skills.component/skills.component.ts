@@ -25,7 +25,7 @@ export class SkillsComponent implements OnInit {
 
     // Radar
     public radarChartLabels: string[] = ['Angular',
-    '.NET', 'NODE.js', 'WPF', 'MVC', 'jQuery'];
+    'NODE.js', 'WPF', '.NET', 'MVC', 'jQuery'];
 
     public radarChartColors: Array<any> = [
     {
@@ -40,7 +40,7 @@ export class SkillsComponent implements OnInit {
     public radarChartOptions:  any;
 
     public radarChartData: any = [
-    {data: [7, 6, 5, 7, 8, 9]}
+    {data: [8, 6, 9, 7, 6, 5]}
     ];
     public radarChartType = 'radar';
 
