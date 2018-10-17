@@ -1,4 +1,7 @@
 $quare-size: 250px;
+$rectangle-width: 390px;
+$rectangle-height: 517.8px;
+
 $animation-time: 0.5s;
 
 .container{
@@ -20,6 +23,55 @@ $animation-time: 0.5s;
         border-style: inset;
         border-width: 1px;
         width: 50px;
+    }
+
+    .main-card{
+        margin: auto;
+        width: $rectangle-width;
+        height: $rectangle-height;
+        overflow: hidden;
+
+        &:hover, &:active{
+            img{
+                opacity: 0.2;
+                animation-name: img-animation;
+                animation-duration: $animation-time;
+            }
+            .activity-description{
+                height: $quare-size/2;
+                margin-top: -1* $quare-size/2;
+                animation-name: description-animation;
+                animation-duration: $animation-time;
+                padding:10px;
+            }
+        }
+
+        img{
+            height: $rectangle-height;
+            width: $rectangle-width;
+            animation-name: img-animation-return;
+            animation-duration: $animation-time / 2;
+        }
+        .activity-description{
+            height: 0;
+            width: $rectangle-width;
+            -webkit-box-align:center;
+            -webkit-box-pack:center;
+            display:-webkit-box;
+            animation-name: description-animation-return;
+            animation-duration: $animation-time / 2.5;
+
+            .text-box{
+                line-height: 100%;
+                font-size: 14x;
+                font-style: italic;
+                text-align: left;
+                .weak{
+                    font-size: 12px;
+                    font-style: italic;
+                }
+            }
+        }
     }
 
     .activity-card{
@@ -106,7 +158,7 @@ $animation-time: 0.5s;
         color: #fff;
     }
 
-    .activity-card{
+    .activity-card, .main-card{
         img{
             border-radius: 3px;
         }
@@ -131,4 +183,22 @@ $animation-time: 0.5s;
         border-top: 1px solid rgb(179, 179, 179);
     }
 
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .main-card{
+        width: 250px !important;
+        height: 332px !important;
+
+        img{
+            width: 250px !important;
+            height: 332px !important;
+        }
+
+        .activity-description{
+            width: 250px !important;
+        }
+
+    }
 }
