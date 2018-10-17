@@ -30,8 +30,15 @@ $animation-time: 0.5s;
         width: $rectangle-width;
         height: $rectangle-height;
         overflow: hidden;
+        position: relative;
 
         &:hover, &:active{
+            .fab{
+                opacity: 1;
+                animation: fade-in;
+                animation-duration: $animation-time / 2;
+                animation-delay: 2s;
+            }
             img{
                 opacity: 0.2;
                 animation-name: img-animation;
@@ -44,6 +51,15 @@ $animation-time: 0.5s;
                 animation-duration: $animation-time;
                 padding:10px;
             }
+        }
+
+        .fab{
+            opacity: 0;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            animation: fade-out;
+            animation-duration: $animation-time / 2;
         }
 
         img{
@@ -79,8 +95,15 @@ $animation-time: 0.5s;
         width: $quare-size;
         height: $quare-size;
         overflow: hidden;
+        position: relative;
 
         &:hover, &:active{
+            .fab{
+                opacity: 1;
+                animation: fade-in;
+                animation-duration: $animation-time / 2;
+                animation-delay: 2s;
+            }
             img{
                 opacity: 0.2;
                 animation-name: img-animation;
@@ -95,26 +118,13 @@ $animation-time: 0.5s;
             }
         }
 
-        @keyframes description-animation {
-            from {  height: 0;
-                    margin-top: 0; }
-            to {    height: $quare-size/2;
-                    margin-top: -1* $quare-size/2;}  
-        }
-        @keyframes img-animation {
-            from { opacity: 1;}
-            to { opacity: 0.2;}  
-        }
-
-        @keyframes description-animation-return {
-            from {  height: $quare-size/2;
-                    margin-top: -1* $quare-size/2; }
-            to {    height: 0;
-                    margin-top: 0;}  
-        }
-        @keyframes img-animation-return {
-            from { opacity: 0.2;}
-            to { opacity: 1;}  
+        .fab{
+            opacity: 0;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            animation: fade-out;
+            animation-duration: $animation-time / 2;
         }
 
         img{
@@ -159,12 +169,14 @@ $animation-time: 0.5s;
     }
 
     .activity-card, .main-card{
+        .fab{
+            color: white;
+        }
         img{
             border-radius: 3px;
         }
         .activity-description{
             .text-box{
-                background-color: #343a40 !important;
                 color: white;
             }
         }
@@ -201,4 +213,34 @@ $animation-time: 0.5s;
         }
 
     }
+}
+
+@keyframes description-animation {
+    from {  height: 0;
+            margin-top: 0; }
+    to {    height: $quare-size/2;
+            margin-top: -1* $quare-size/2;}  
+}
+@keyframes img-animation {
+    from { opacity: 1;}
+    to { opacity: 0.2;}  
+}
+
+@keyframes description-animation-return {
+    from {  height: $quare-size/2;
+            margin-top: -1* $quare-size/2; }
+    to {    height: 0;
+            margin-top: 0;}  
+}
+@keyframes img-animation-return {
+    from { opacity: 0.2;}
+    to { opacity: 1;}  
+}
+@keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}  
+}
+@keyframes fade-out {
+    from { opacity: 1;}
+    to { opacity: 0;}  
 }

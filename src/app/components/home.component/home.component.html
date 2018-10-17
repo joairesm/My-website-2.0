@@ -6,6 +6,7 @@
                     <div class="col-md-7 col-xs-12">
                         <h2>I’m a software engineer, specialised in front-end</h2>
                         <div class="main-card" [ngClass]="{'shadow': lighttheme}">
+                            <i class="fab fa-2x fa-twitter"></i>
                             <img src="../../../assets/me-1-min.jpeg">
                             <div class="activity-description">
                                 <div class="text-box" *ngIf="tweets?.length > 0">
@@ -25,6 +26,7 @@
                             <div *ngIf="photos?.data.length > 0">
                                 <h2>my last instagram picture</h2>
                                 <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
+                                    <i class="fab fa-2x fa-instagram"></i>
                                     <img src="{{photos?.data[0].images.standard_resolution.url}}">
                                     <div class="activity-description">
                                         <div class="text-box">
@@ -39,6 +41,7 @@
                             <div *ngIf="music?.items.length > 0" >
                                     <h2>my last song on spotify</h2>
                                 <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
+                                    <i class="fab fa-2x fa-spotify"></i>
                                     <img src="{{music?.items[0].track.album.images[0].url}}">
                                     <div class="activity-description">
                                         <div class="text-box">
