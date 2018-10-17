@@ -5,11 +5,12 @@
                 <div class="row">
                     <div class="col-md-7 col-xs-12">
                         <h2>I’m a software engineer, specialised in front-end</h2>
-                        <div class="main-card">
+                        <div class="main-card" [ngClass]="{'shadow': lighttheme}">
                             <img src="../../../assets/me-1-min.jpeg">
                             <div class="activity-description">
                                 <div class="text-box" *ngIf="tweets?.length > 0">
-                                    <span class="weak">my last tweet </span>"{{tweets[0]?.text}}"
+                                    <span class="weak">my last tweet</span>
+                                    <br>"{{tweets[0]?.text}}"
                                 </div>
                             </div>
                         </div>
@@ -23,7 +24,7 @@
                         <div class="posts-wrapper animate" *ngIf="music?.items.length > 0 &&  photos?.data.length > 0" >
                             <div *ngIf="photos?.data.length > 0">
                                 <h2>my last instagram picture</h2>
-                                <div class="activity-card">
+                                <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
                                     <img src="{{photos?.data[0].images.standard_resolution.url}}">
                                     <div class="activity-description">
                                         <div class="text-box">
@@ -37,7 +38,7 @@
                             <br>
                             <div *ngIf="music?.items.length > 0" >
                                     <h2>my last song on spotify</h2>
-                                <div class="activity-card">
+                                <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
                                     <img src="{{music?.items[0].track.album.images[0].url}}">
                                     <div class="activity-description">
                                         <div class="text-box">

@@ -48,7 +48,7 @@ $light-color: rgb(231, 231, 231);
     }
 
     .simple-button{
-        border: 0.5px solid #ffffff80;
+        border: 1px solid #ffffff80;
         color: #fff;
     
         &:hover, &:active{
@@ -78,7 +78,7 @@ $light-color: rgb(231, 231, 231);
     }
 
     .simple-button{
-        border: 0.5px solid #343a4080;
+        border: 1px solid #343a4080;
         color: #343a40;
     
         &:hover, &:active{
