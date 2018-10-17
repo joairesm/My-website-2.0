@@ -47,7 +47,7 @@ $animation-time: 0.5s;
                 margin-top: -1* $quare-size/2;
                 animation-name: description-animation;
                 animation-duration: $animation-time;
-                padding:10px 20px;
+                padding:10px;
             }
         }
 
@@ -75,11 +75,11 @@ $animation-time: 0.5s;
 
             .text-box{
                 line-height: 100%;
-                font-size: 12px;
+                font-size: 14x;
                 font-style: italic;
                 text-align: left;
                 .weak{
-                    font-size: 8px;
+                    font-size: 12px;
                     font-style: italic;
                 }
             }

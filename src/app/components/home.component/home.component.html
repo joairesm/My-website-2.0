@@ -2,9 +2,12 @@
     <div class="animate">
         <div class="container">
             <div class="content">
+                <h2>I’m a software engineer, specialised in front-end and interest in UX design</h2>
                 <div class="row">
                     <div class="col-md-7 col-xs-12">
-                        <h1>hello</h1>
+                        <h2 class="animate" *ngIf="tweets?.length > 0">
+                            {{tweets[0]?.text}}
+                        </h2>
                     </div>
                     <div class="col-md-5 col-xs-12">
 

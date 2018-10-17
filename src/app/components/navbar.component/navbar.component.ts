@@ -46,7 +46,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
 
     setThemebyTime(time:number):boolean{
-        if(time > 8 && time < 18)
+        console.log('time ->' + time);
+        if(time >= 8 && time <= 18)
             return true;
         
         else

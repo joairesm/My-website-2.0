@@ -63,7 +63,6 @@ export class HomeComponent implements OnInit {
         .subscribe(
         (data) => {
             this.tweets = data;
-            console.log(data);
         },
         (error) => {
             console.log(error);
