@@ -13,6 +13,14 @@
     }
 }
 
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .container{
+        padding-top: 30px;
+    }
+
+}
+
 .dark-theme{
     background-color: #343a40;
 
