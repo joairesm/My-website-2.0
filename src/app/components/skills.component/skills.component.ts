@@ -89,10 +89,10 @@ export class SkillsComponent implements OnInit {
                 },
                 scale: {
                     gridLines: { 
-                        color: 'grey' 
+                        color: '#585858' 
                     },
                     angleLines: { 
-                        color: 'grey' 
+                        color: '#585858' 
                     },
                     pointLabels: {
                         fontSize: 14,
