@@ -1,6 +1,6 @@
 $quare-size: 250px;
 $rectangle-width: 390px;
-$rectangle-height: 517.8px;
+$rectangle-height: 546px;
 
 $animation-time: 0.5s;
 
@@ -49,6 +49,12 @@ $animation-time: 0.5s;
                 animation-name: description-animation;
                 animation-duration: $animation-time;
                 padding:10px;
+
+                .text-box{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: $animation-time / 2;
+                }
             }
         }
 
@@ -77,6 +83,9 @@ $animation-time: 0.5s;
             animation-duration: $animation-time / 2.5;
 
             .text-box{
+                opacity: 0;
+                animation: fade-out;
+                animation-duration: $animation-time / 2;
                 line-height: 100%;
                 font-size: 14x;
                 font-style: italic;
@@ -113,6 +122,13 @@ $animation-time: 0.5s;
                 animation-name: description-animation;
                 animation-duration: $animation-time;
                 padding:10px;
+
+                .text-box{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: $animation-time / 2;
+            
+                }
             }
         }
 
@@ -137,10 +153,14 @@ $animation-time: 0.5s;
             -webkit-box-align:center;
             -webkit-box-pack:center;
             display:-webkit-box;
+            padding:10px;
             animation-name: description-animation-return;
             animation-duration: $animation-time / 2.5;
 
             .text-box{
+                opacity: 0;
+                animation: fade-out;
+                animation-duration: $animation-time / 2;
                 line-height: 100%;
                 font-size: 14x;
                 font-style: italic;
@@ -199,11 +219,11 @@ $animation-time: 0.5s;
 @media (max-width: 575.98px) { 
     .main-card{
         width: 250px !important;
-        height: 332px !important;
+        height: 350px !important;
 
         img{
             width: 250px !important;
-            height: 332px !important;
+            height: 350px !important;
         }
 
         .activity-description{
