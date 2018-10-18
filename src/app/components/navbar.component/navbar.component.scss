@@ -1,4 +1,6 @@
 $animation-time: 0.5s;
+$light-action-color: #9f7be1c9;
+$dark-action-color: #40E0D0;
 
 #navbar{
 
@@ -104,12 +106,16 @@ $animation-time: 0.5s;
 
     h1{
         color: #fff;
+
+        &:before{
+            color: $dark-action-color;
+        }
     }
     .navbar{
         border-color:black;
     }
     .active{
-        border-color:white;
+        border-color: $dark-action-color;
     }
 
     .fas{
@@ -123,9 +129,12 @@ $animation-time: 0.5s;
 
     h1{
         color: #343a40;
+        &:before{
+            color: $light-action-color;
+        }
     }
     .navbar{
-        border-color:darkgrey;
+        border-color:$light-action-color;
     }
     .active{
         border-color:rgb(231, 231, 231);

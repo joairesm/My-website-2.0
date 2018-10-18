@@ -1,6 +1,9 @@
 $dark-color: #343a40;
 $light-color: rgb(231, 231, 231);
 
+$dark-action-color: #40E0D0;
+$light-action-color: #9f7be1c9;
+
 .content{
     text-align: center;
 
@@ -47,7 +50,7 @@ $light-color: rgb(231, 231, 231);
 
     .simple-button{
         border-radius: 8px;
-        border: 1px solid #ffffff80;
+        border: 1px solid $dark-action-color;
         color: #fff;
     
         &:hover, &:active{
@@ -77,7 +80,7 @@ $light-color: rgb(231, 231, 231);
     }
 
     .simple-button{
-        border: 1px solid #343a4080;
+        border: 1px solid $light-action-color;
         color: #343a40;
     
         &:hover, &:active{

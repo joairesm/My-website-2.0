@@ -1,6 +1,8 @@
 $quare-size: 250px;
 $rectangle-width: 390px;
 $rectangle-height: 546px;
+$dark-action-color: #40E0D0;
+$light-action-color: #9f7be1c9;
 
 $animation-time: 0.5s;
 
@@ -180,7 +182,7 @@ $animation-time: 0.5s;
     background-color: #343a40;
 
     hr{
-        border-top: 1px solid rgb(61, 61, 61);
+        border-top: 1px solid $dark-action-color;
     }
 
     h1, h2{
@@ -211,7 +213,7 @@ $animation-time: 0.5s;
     }
 
     hr{
-        border-top: 1px solid rgb(179, 179, 179);
+        border-top: 1px solid $light-action-color;
     }
 
 }

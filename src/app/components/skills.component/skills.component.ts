@@ -27,15 +27,7 @@ export class SkillsComponent implements OnInit {
     public radarChartLabels: string[] = ['Angular',
     'NODE.js', 'WPF', '.NET', 'MVC', 'jQuery'];
 
-    public radarChartColors: Array<any> = [
-    {
-        borderColor: 'rgba(148,159,177,1)',
-        pointBackgroundColor: 'rgba(148,159,177,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
-    ];
+    public radarChartColors: Array<any>;
 
     public radarChartOptions:  any;
 
@@ -75,6 +67,16 @@ export class SkillsComponent implements OnInit {
                     },
                 }
             };
+
+            this.radarChartColors = [
+                {
+                    borderColor: '#9f7be1c9',
+                    pointBackgroundColor: 'rgba(148,159,177,1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+                }
+            ];
         }
         else{
             this.radarChartOptions = {
@@ -105,6 +107,16 @@ export class SkillsComponent implements OnInit {
                     },
                 }
             };
+
+            this.radarChartColors = [
+                {
+                    borderColor: '#40E0D0',
+                    pointBackgroundColor: 'rgba(148,159,177,1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+                }
+            ];
         }
 
 
