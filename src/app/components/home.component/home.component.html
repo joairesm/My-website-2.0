@@ -10,7 +10,7 @@
                             <img src="../../../assets/me-1-min.jpg">
                             <div class="activity-description">
                                 <div class="text-box" *ngIf="tweets?.length > 0">
-                                    <span class="weak">my last tweet:</span>
+                                    <span class="weak">my lastest tweet:</span>
                                     <br><br>"{{tweets[0]?.text}}"
                                 </div>
                             </div>
@@ -24,7 +24,7 @@
                     <div class="col-md-5 col-xs-12">
                         <div class="posts-wrapper animate" *ngIf="music?.items.length > 0 &&  photos?.data.length > 0" >
                             <div *ngIf="photos?.data.length > 0">
-                                <h2>my last instagram picture</h2>
+                                <h2>my lastest instagram picture</h2>
                                 <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
                                     <i class="fab fa-2x fa-instagram"></i>
                                     <img src="{{photos?.data[0].images.standard_resolution.url}}">
@@ -39,7 +39,7 @@
                             <hr>
                             <br>
                             <div *ngIf="music?.items.length > 0" >
-                                    <h2>my last song on spotify</h2>
+                                    <h2>my lastest song on spotify</h2>
                                 <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
                                     <i class="fab fa-2x fa-spotify"></i>
                                     <img src="{{music?.items[0].track.album.images[0].url}}">

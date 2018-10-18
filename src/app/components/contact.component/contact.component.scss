@@ -11,9 +11,8 @@ $light-color: rgb(231, 231, 231);
         .in-center{
             display: inline-block;
             vertical-align: middle;
-            line-height: 18px; /* <-- adjust this */
+            line-height: 18px;
         }
-
     }
 }
 
@@ -24,7 +23,6 @@ $light-color: rgb(231, 231, 231);
 }
 
 .simple-button{
-    border-radius: 3px;
     background:transparent;
     opacity: 0.75;
     font-size: 17px;
@@ -48,6 +46,7 @@ $light-color: rgb(231, 231, 231);
     }
 
     .simple-button{
+        border-radius: 8px;
         border: 1px solid #ffffff80;
         color: #fff;
     
