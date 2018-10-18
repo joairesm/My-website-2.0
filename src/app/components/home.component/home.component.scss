@@ -81,7 +81,8 @@ $animation-time: 0.5s;
             display:-webkit-box;
             animation-name: description-animation-return;
             animation-duration: $animation-time / 2.5;
-
+            padding:10px;
+            
             .text-box{
                 opacity: 0;
                 animation: fade-out;
