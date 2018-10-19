@@ -34,6 +34,9 @@ h2{
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+    h1{
+        font-size: 36px;
+    }
     .hide-when-small{
         height: 0px;
         width: 0px;
