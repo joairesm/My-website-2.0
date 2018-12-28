@@ -1,15 +1,11 @@
 <div [ngClass]="lighttheme ? 'light-theme' : 'dark-theme'">
-    <div class="animate">
-        
+    <div class="animate">    
         <div class="container">
-
             <div class="row">
                 <div class="col-md-3 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
                  <div class="p-languages">
                      <div class="hide-when-large">
-                        <br>
-                        <br>
-                        <br>
+                        <br><br><br>
                      </div>
                     <h2>Programming Languages</h2>
                     <br>
@@ -29,11 +25,9 @@
                                 <hr>
                                 <span>SASS</span>
                             </div>
-                        </div>
-                    
+                        </div>   
                  </div>
                 </div>
-
                 <div class="col-md-9 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
                     <h2>Frameworks</h2>
                     <br>
@@ -48,6 +42,9 @@
                         </div>
                 </div>
             </div>
+            <br><br>
+            <h2>Tools & Platforms</h2>
+            <span *ngFor="let tool of tools" [ngClass]="lighttheme ? 'badge-light' : 'badge-dark'" class="badge">{{tool}}</span>
         </div>
     </div>
 </div>

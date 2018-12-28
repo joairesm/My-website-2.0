@@ -15,6 +15,22 @@ export class SkillsComponent implements OnInit {
         this.changeGraphColors(this.lighttheme);
     }
 
+    tools = [
+        'Sketch',
+        'Photoshop',
+        'Visual Studio',
+        'MVVM light',
+        'WPF',
+        'UWP',
+        'Xamarin',
+        'Unity3D',
+        'Jira',
+        'TFS',
+        'Agile Scrum',
+        'Trello',
+        'Splunk'
+    ];
+
     ngOnInit(): void { 
         this.gEM.changeTitle('skills');
         this.gEM.changeThemeEmitter.subscribe(newTheme => {
@@ -25,7 +41,7 @@ export class SkillsComponent implements OnInit {
 
     // Radar
     public radarChartLabels: string[] = [
-        'Angular', '.NET core', 'UWP WPF', 'Xamarin', 'ReactJS','Redux'];
+        'Angular', '.NET', '.NET core', 'React','Redux'];
 
     public radarChartColors: Array<any>;
 
@@ -33,7 +49,7 @@ export class SkillsComponent implements OnInit {
 
     public radarChartData: any = [
     {
-        data: [9, 6, 8, 6, 5, 6]
+        data: [8, 7, 6, 5, 6]
     }];
     public radarChartType = 'radar';
 

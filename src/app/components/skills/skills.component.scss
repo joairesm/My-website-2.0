@@ -1,3 +1,6 @@
+$dark-color: #485058;
+$light-color: rgb(231, 231, 231);
+
 .container{
     padding-top: 50px; 
     padding-bottom: 50px;
@@ -11,6 +14,24 @@
             opacity: 0.85;
         }
     }
+}
+
+.badge{
+    font-weight: normal;
+    font-family: inherit;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.badge-light{
+    background-color: $dark-color;
+    color: $light-color;
+    border-radius: 0;
+}
+.badge-dark{
+    background-color: $light-color;
+    color: $dark-color;
+    border-radius: 8px;
 }
 
 // Extra small devices (portrait phones, less than 576px)
