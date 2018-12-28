@@ -24,16 +24,17 @@ export class SkillsComponent implements OnInit {
     }
 
     // Radar
-    public radarChartLabels: string[] = ['Angular',
-    'NODE.js', 'WPF', '.NET', 'MVC', 'jQuery'];
+    public radarChartLabels: string[] = [
+        'Angular', '.NET core', 'UWP WPF', 'Xamarin', 'ReactJS','Redux'];
 
     public radarChartColors: Array<any>;
 
     public radarChartOptions:  any;
 
     public radarChartData: any = [
-    {data: [8, 6, 9, 7, 6, 5]}
-    ];
+    {
+        data: [9, 6, 8, 6, 5, 6]
+    }];
     public radarChartType = 'radar';
 
     changeGraphColors(lightTheme: boolean){

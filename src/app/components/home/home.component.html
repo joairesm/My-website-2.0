@@ -1,0 +1,62 @@
+<div [ngClass]="lighttheme ? 'light-theme' : 'dark-theme'">
+    <div class="animate">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-7 col-xs-12">
+                        <h2>I’m a software engineer, specialised in front-end</h2>
+                        <div class="main-card" [ngClass]="{'shadow': lighttheme}">
+                            <i class="fab fa-2x fa-twitter"></i>
+                            <img src="../../../assets/me-1-min.jpg">
+                            <div class="activity-description">
+                                <div class="text-box" *ngIf="tweets?.length > 0">
+                                    <span class="weak">my latest tweet:</span>
+                                    <br><br>"{{tweets[0]?.text}}"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide-when-large">
+                            <br>
+                            <hr>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-xs-12">
+                        <div class="loader" [ngClass]="lighttheme ? 'dark-color' : 'light-color'" *ngIf="photos == null" >Loading...</div>
+                        <div class="animate" *ngIf="photos?.data.length > 0">
+                            <h2>my latest instagram picture</h2>
+                            <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
+                                <i class="fab fa-2x fa-instagram"></i>
+                                <img src="{{photos?.data[0].images.standard_resolution.url}}">
+                                <div class="activity-description">
+                                    <div class="text-box">
+                                        <span class="weak">caption </span>"{{photos?.data[0].caption.text}}"
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr *ngIf="photos?.data.length > 0">
+                        <br>
+                        <div class="loader" [ngClass]="lighttheme ? 'dark-color' : 'light-color'" *ngIf="music == null" >Loading...</div>
+                        <div class="animate" *ngIf="music?.items.length > 0" >
+                                <h2>my latest song on spotify</h2>
+                            <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
+                                <i class="fab fa-2x fa-spotify"></i>
+                                <img src="{{music?.items[0].track.album.images[0].url}}">
+                                <div class="activity-description">
+                                    <div class="text-box">
+                                        {{music?.items[0].track.name}} <br>
+                                        <span class="weak">by</span> {{music?.items[0].track.artists[0].name}} <br>
+                                        <span class="weak">from</span>  {{music?.items[0].track.album.name}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
