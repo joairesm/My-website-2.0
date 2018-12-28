@@ -23,6 +23,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+dist/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -330,14 +331,5 @@ ASALocalRun/
 .mfractor/
 src/app/models/model.ts
 src/assets/me-1-min.jpg
-dist/mywebsite/styles.ed6ab04e49e9f8516922.css
 .gitignore
-dist/mywebsite/3rdpartylicenses.txt
-dist/mywebsite/index.html
-dist/mywebsite/main.92821a1821708704ff16.js
-dist/mywebsite/polyfills.f6ae3e8b63939c618130.js
-dist/mywebsite/runtime.ec2944dd8b20ec099bf3.js
-dist/mywebsite/scripts.0b9707c1ea2a978720e8.js
-dist/mywebsite/assets/me-1-min.jpeg
-dist/mywebsite/assets/me-1-min.jpg
 src/.DS_Store
