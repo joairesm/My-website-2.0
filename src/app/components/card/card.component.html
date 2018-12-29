@@ -3,9 +3,9 @@
         <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
             <i class="fab fa-2x" [ngClass]="faicon" ></i>
             <img src="{{imgsrc}}">
-        </div>
-        <div class="activity-description">
-            <ng-content></ng-content>
+            <div class="activity-description">
+                <ng-content></ng-content>
+            </div>
         </div>
     </div>
 </div>

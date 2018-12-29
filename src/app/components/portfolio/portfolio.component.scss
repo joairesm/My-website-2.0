@@ -3,6 +3,10 @@ $light-action-color: #9f7be1c9;
 $dark-color: #343a40;
 $light-color: rgb(231, 231, 231);
 
+.container{
+    text-align: center;
+}
+
 app-card{
     margin: 20px;
 }
@@ -20,6 +24,9 @@ a{
 }
 
 .light-theme{
+    h1,h2,h3 {
+        color: #343a40;
+    }
     a{
         border: solid 1px $light-action-color;
         color: $dark-color;
@@ -32,6 +39,10 @@ a{
 }
 
 .dark-theme{
+
+    h1, h2, h3{
+        color: #fff;
+    }
     a{
         border-radius: 5px;
         border: solid 1px $dark-action-color;

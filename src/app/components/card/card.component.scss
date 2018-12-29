@@ -49,22 +49,20 @@ $animation-time: 0.5s;
             animation-name: img-animation-return;
             animation-duration: $animation-time / 2;
         }
-    }
-
-    .activity-description{
-        display: none;
-        opacity: 0;
-        width: $quare-size;
-        margin: auto;
-        padding:0px 10px;
-        height: 0;
-        line-height: 100%;
-        text-align: left;
-        font-style: italic;
-
-        animation-name: description-animation-return;
-        animation-duration: $animation-time / 2;
-
+        .activity-description{
+            opacity: 0;
+            width: $quare-size;
+            margin: auto;
+            padding:0px 10px;
+            height: 0;
+            line-height: 100%;
+            text-align: left;
+            font-style: italic;
+    
+            animation-name: description-animation-return;
+            animation-duration: $animation-time / 2;
+    
+        }
     }
   
     &:hover, &:active{
@@ -82,16 +80,16 @@ $animation-time: 0.5s;
                 animation-name: img-animation;
                 animation-duration: $animation-time;
             }
-        }
-        .activity-description{
-            position: relative;
-            display: inherit;
-            padding: 0px 10px;
-            height: $quare-size/2;
-            opacity: 1;
-            margin-top: -1* $quare-size/2;
-            animation-name: description-animation;
-            animation-duration: $animation-time / 2;
+            .activity-description{
+                position: relative;
+                display: inherit;
+                padding: 0px 10px;
+                height: $quare-size/2;
+                opacity: 1;
+                margin-top: -1* $quare-size/2;
+                animation-name: description-animation;
+                animation-duration: $animation-time / 2;
+            }
         }
     }
 }
