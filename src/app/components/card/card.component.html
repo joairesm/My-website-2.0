@@ -1,4 +1,4 @@
-<div class="animate" [ngClass]="lighttheme ? 'light-theme' : 'dark-theme'">
+<div [ngClass]="{'light-theme':lighttheme, 'dark-theme':!lighttheme, 'animate':animate}">
     <div class="card-wrapper" [ngClass]="{'xl': xl}">
         <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
             <i class="fab fa-2x" [ngClass]="faicon" ></i>

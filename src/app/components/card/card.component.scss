@@ -6,6 +6,7 @@ $animation-time: 0.5s;
 
 .xl{
     margin: auto;
+    width: $rectangle-width !important;
     .activity-card{
         width: $rectangle-width !important;
         height: auto !important;
@@ -24,8 +25,10 @@ $animation-time: 0.5s;
 }
 
 .card-wrapper{
-        
+    margin: auto;
+    width: $quare-size;
     .activity-card{
+        overflow: hidden;
         margin: auto;
         width: $quare-size;
         position: relative;
@@ -36,10 +39,12 @@ $animation-time: 0.5s;
             top: 10px;
             right: 10px;
             animation: fade-out;
-            animation-duration: $animation-time / 2;
+            animation-duration: $animation-time ;
         }
 
         img{
+            transition: transform $animation-time;
+            transform: scale(1);
             width: $quare-size;
             animation-name: img-animation-return;
             animation-duration: $animation-time / 2;
@@ -48,14 +53,15 @@ $animation-time: 0.5s;
 
     .activity-description{
         display: none;
+        opacity: 0;
         width: $quare-size;
         margin: auto;
-        padding:0;
+        padding:0px 10px;
         height: 0;
-        opacity: 1;
+        line-height: 100%;
         text-align: left;
         font-style: italic;
-        
+
         animation-name: description-animation-return;
         animation-duration: $animation-time / 2;
 
@@ -63,20 +69,23 @@ $animation-time: 0.5s;
   
     &:hover, &:active{
         .activity-card{
+            overflow: hidden;
             .fab{
                 opacity: 1;
                 animation: fade-in;
                 animation-duration: $animation-time / 2;
             }
             img{
+                transition: transform $animation-time;
+                transform: scale(1.1);
                 opacity: 0.2;
                 animation-name: img-animation;
                 animation-duration: $animation-time;
             }
         }
         .activity-description{
-            overflow: hidden;
-            display: block;
+            position: relative;
+            display: inherit;
             padding: 0px 10px;
             height: $quare-size/2;
             opacity: 1;
@@ -96,7 +105,7 @@ $animation-time: 0.5s;
     .fab{
         color: white;
     }
-    img{
+    .activity-card{
         border-radius: 5px;
     }
     .activity-description{

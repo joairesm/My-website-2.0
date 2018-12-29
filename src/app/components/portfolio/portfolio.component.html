@@ -1,11 +1,31 @@
 <div class="container">
     <div [ngClass]="lighttheme ? 'light-theme' : 'dark-theme'">
-        <ul>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-            <li>List Item 4</li>
-        </ul>
+        <br><br>
+        <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        <app-card
+                        [animate]="true"
+                        [img-src]="'../../../assets/burger-thumbnail.png'"
+                        [lighttheme]="lighttheme">
+                        Burger builder  <span class="weak">React & Redux</span><br>
+                        <p class="weak">I made this app while learning Reactjs</p>
+                        <a href="https://react-redux-burger-a09c8.firebaseapp.com/" target="_blank">Live demo</a>&nbsp;
+                        <a href="https://github.com/joairesm/burguer-challenge" target="_blank">Github</a>
+                    </app-card>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        <app-card
+                        [animate]="true"
+                        [img-src]="'../../../assets/dashboard-thumbnail.png'"
+                        [lighttheme]="lighttheme">
+                        Dashboard <span class="weak">Angular & Redux</span><br>
+                        <p class="weak">I made this app while learning Redux for Angular</p>
+                        <a href="https://challenge-angular-redux.firebaseapp.com/" target="_blank">Live demo</a>&nbsp;
+                        <a href="https://github.com/joairesm/challenge" target="_blank">Github</a>
+                    </app-card>
+                </div>
+        </div>
+
 
     </div>
 

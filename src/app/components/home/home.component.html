@@ -4,10 +4,10 @@
             <div class="content">
                 <div class="row">
                     <div class="col-md-7 col-xs-12">
-                        <h3>{{description}}</h3><br><br>
-                        <!-- <h2>I’m a software engineer, specialised in front-end</h2> -->
+                        <h2>I’m a software engineer, specialised in front-end</h2>
                         <app-card
                             [xl]="true"
+                            [animate]="true"
                             [img-src]="'../../../assets/me-1-min.jpg'"
                             [lighttheme]="lighttheme"
                             [fa-icon] = "'fa-twitter'">
@@ -25,6 +25,7 @@
                         <div class="animate" *ngIf="photos?.data.length > 0">
                             <h2>my latest instagram picture</h2>
                             <app-card
+                                [animate]="true"
                                 [img-src]="photos?.data[0].images.standard_resolution.url"
                                 [lighttheme]="lighttheme"
                                 [fa-icon] = "'fa-instagram'">
@@ -36,6 +37,7 @@
                         <div class="animate" *ngIf="music?.items.length > 0" >
                             <h2>my latest song on spotify</h2>
                             <app-card
+                                [animate]="true"
                                 [img-src]="music?.items[0].track.album.images[0].url"
                                 [lighttheme]="lighttheme"
                                 [fa-icon] = "'fa-spotify'">

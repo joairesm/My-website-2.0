@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 
+    @Input('animate') animate: boolean;
     @Input('lighttheme') lighttheme: boolean;
     @Input('img-src') imgsrc: string;
     @Input('fa-icon') faicon:string;
