@@ -5,16 +5,16 @@
                 <div class="row">
                     <div class="col-md-7 col-xs-12">
                         <h2>I’m a software engineer, specialised in front-end</h2>
-                        <div class="main-card" [ngClass]="{'shadow': lighttheme}">
-                            <i class="fab fa-2x fa-twitter"></i>
-                            <img src="../../../assets/me-1-min.jpg">
-                            <div class="activity-description">
-                                <div class="text-box" *ngIf="tweets?.length > 0">
-                                    <span class="weak">my latest tweet:</span>
-                                    <br><br>"{{tweets[0]?.text}}"
-                                </div>
+                        <app-card
+                            [xl]="true"
+                            [img-src]="'../../../assets/me-1-min.jpg'"
+                            [lighttheme]="lighttheme"
+                            [fa-icon] = "'fa-twitter'">
+                            <div *ngIf="tweets?.length > 0">
+                                <span class="weak">my latest tweet:</span>
+                                <br>"{{tweets[0]?.text}}"
                             </div>
-                        </div>
+                            </app-card>
                         <div class="hide-when-large">
                             <br><hr><br>
                         </div>
@@ -23,31 +23,25 @@
                         <app-loader [lighttheme]="lighttheme" *ngIf="photos == null"></app-loader>
                         <div class="animate" *ngIf="photos?.data.length > 0">
                             <h2>my latest instagram picture</h2>
-                            <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
-                                <i class="fab fa-2x fa-instagram"></i>
-                                <img src="{{photos?.data[0].images.standard_resolution.url}}">
-                                <div class="activity-description">
-                                    <div class="text-box">
-                                        <span class="weak">caption </span>"{{photos?.data[0].caption.text}}"
-                                    </div>
-                                </div>
-                            </div>
+                            <app-card
+                                [img-src]="photos?.data[0].images.standard_resolution.url"
+                                [lighttheme]="lighttheme"
+                                [fa-icon] = "'fa-instagram'">
+                                <span class="weak">caption </span>"{{photos?.data[0].caption.text}}"
+                            </app-card>
                         </div>
                         <br><hr *ngIf="photos?.data.length > 0"><br>
                         <app-loader [lighttheme]="lighttheme" *ngIf="music == null"></app-loader>
                         <div class="animate" *ngIf="music?.items.length > 0" >
-                                <h2>my latest song on spotify</h2>
-                            <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
-                                <i class="fab fa-2x fa-spotify"></i>
-                                <img src="{{music?.items[0].track.album.images[0].url}}">
-                                <div class="activity-description">
-                                    <div class="text-box">
-                                        {{music?.items[0].track.name}} <br>
-                                        <span class="weak">by</span> {{music?.items[0].track.artists[0].name}} <br>
-                                        <span class="weak">from</span>  {{music?.items[0].track.album.name}}
-                                    </div>
-                                </div>
-                            </div>
+                            <h2>my latest song on spotify</h2>
+                            <app-card
+                                [img-src]="music?.items[0].track.album.images[0].url"
+                                [lighttheme]="lighttheme"
+                                [fa-icon] = "'fa-spotify'">
+                                {{music?.items[0].track.name}} <br>
+                                    <span class="weak">by</span> {{music?.items[0].track.artists[0].name}} <br>
+                                    <span class="weak">from</span>  {{music?.items[0].track.album.name}}
+                            </app-card>
                         </div>
                     </div>
                 </div>

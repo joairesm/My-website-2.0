@@ -1,0 +1,176 @@
+$quare-size: 250px;
+$rectangle-width: 390px;
+$rectangle-height: 546px;
+
+$animation-time: 0.5s;
+
+.xl{
+    margin: auto;
+    .activity-card{
+        width: $rectangle-width !important;
+        height: auto !important;
+        .fab{
+            top: 20px !important;
+            right: 20px !important;
+        }
+        img{
+            width: $rectangle-width !important;
+            height: auto !important;
+        }
+    }
+    .activity-description{
+        width: $rectangle-width !important;
+    }
+}
+
+.card-wrapper{
+        
+    .activity-card{
+        margin: auto;
+        width: $quare-size;
+        position: relative;
+
+        .fab{
+            opacity: 0;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            animation: fade-out;
+            animation-duration: $animation-time / 2;
+        }
+
+        img{
+            width: $quare-size;
+            animation-name: img-animation-return;
+            animation-duration: $animation-time / 2;
+        }
+    }
+
+    .activity-description{
+        display: none;
+        width: $quare-size;
+        margin: auto;
+        padding:0;
+        height: 0;
+        opacity: 1;
+        text-align: left;
+        font-style: italic;
+        
+        animation-name: description-animation-return;
+        animation-duration: $animation-time / 2;
+
+    }
+  
+    &:hover, &:active{
+        .activity-card{
+            .fab{
+                opacity: 1;
+                animation: fade-in;
+                animation-duration: $animation-time / 2;
+            }
+            img{
+                opacity: 0.2;
+                animation-name: img-animation;
+                animation-duration: $animation-time;
+            }
+        }
+        .activity-description{
+            overflow: hidden;
+            display: block;
+            padding: 0px 10px;
+            height: $quare-size/2;
+            opacity: 1;
+            margin-top: -1* $quare-size/2;
+            animation-name: description-animation;
+            animation-duration: $animation-time / 2;
+        }
+    }
+}
+
+.dark-theme{
+    background-color: #343a40;
+
+    h1, h2{
+        color: #fff;
+    }
+    .fab{
+        color: white;
+    }
+    img{
+        border-radius: 5px;
+    }
+    .activity-description{
+        color: white;
+    }
+}
+.light-theme{
+    h1,h2{
+        color: #343a40;
+    }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .xl{
+        width: 250px !important;
+        img{
+            width: 250px !important;
+        }
+
+        .activity-description{
+            width: 250px !important;
+            padding:10px !important;
+        }
+
+    }
+
+    .xl{
+        .activity-card{
+            width: $quare-size !important;
+            .fab{
+                top: 10px !important;
+                right: 10px !important;
+            }
+            img{
+                width: $quare-size !important;
+            }
+        }
+        .activity-description{
+            width: $quare-size !important;
+        }
+    }
+}
+
+@keyframes description-animation {
+    from {  opacity: 0;
+            height: 0;
+            margin-top: 0; }
+    to {    opacity: 1;
+            height: $quare-size/2;
+            margin-top: -1* $quare-size/2;}  
+}
+@keyframes img-animation {
+    from { opacity: 1;}
+    to { opacity: 0.2;}  
+}
+@keyframes description-animation-return {
+    from {  opacity: 1;
+            height: $quare-size/2;
+            margin-top: -1* $quare-size/2; }
+    to {    opacity: 0;
+            height: 0;
+            margin-top: 0;}  
+}
+@keyframes img-animation-return {
+    from { opacity: 0.2 }
+    to { opacity: 1 }  
+}
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }  
+}
+@keyframes fade-out {
+    from { opacity: 1 }
+    to { opacity: 0 }  
+}

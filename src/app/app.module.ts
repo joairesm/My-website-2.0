@@ -16,6 +16,7 @@ import { SpotifyService } from './services/spotify.service';
 import { TwitterService } from './services/twitter.service';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { CardComponent } from './components/card/card.component';
 
 const appRoutes: Routes = [
   { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     ContactComponent,
     ToggleButtonComponent,
     PortfolioComponent,
-    LoaderComponent
+    LoaderComponent,
+    CardComponent
   ],
   imports: [
     RouterModule.forRoot(
