@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
     photos: any;
     music: any;
     tweets: any;
+    description = 'I’m a self-motivated and creative computer engineer with 2+ years in software and web development, specialising in front- end with a keen interest in UX/UI design.';
     
     constructor(
         private gEM: globalEventManager, 
