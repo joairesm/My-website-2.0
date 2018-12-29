@@ -18,9 +18,9 @@ $animation-time: 0.5s;
             width: $rectangle-width !important;
             height: auto !important;
         }
-    }
-    .activity-description{
-        width: $rectangle-width !important;
+        .activity-description{
+            width: $rectangle-width !important;
+        }
     }
 }
 
@@ -119,20 +119,9 @@ $animation-time: 0.5s;
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+
     .xl{
         width: 250px !important;
-        img{
-            width: 250px !important;
-        }
-
-        .activity-description{
-            width: 250px !important;
-            padding:10px !important;
-        }
-
-    }
-
-    .xl{
         .activity-card{
             width: $quare-size !important;
             .fab{
@@ -142,9 +131,10 @@ $animation-time: 0.5s;
             img{
                 width: $quare-size !important;
             }
-        }
-        .activity-description{
-            width: $quare-size !important;
+            .activity-description{
+                width: $quare-size !important;
+                padding: 0px 10px !important;
+            }
         }
     }
 }
