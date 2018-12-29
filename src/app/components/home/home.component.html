@@ -16,13 +16,11 @@
                             </div>
                         </div>
                         <div class="hide-when-large">
-                            <br>
-                            <hr>
-                            <br>
+                            <br><hr><br>
                         </div>
                     </div>
                     <div class="col-md-5 col-xs-12">
-                        <div class="loader" [ngClass]="lighttheme ? 'dark-color' : 'light-color'" *ngIf="photos == null" >Loading...</div>
+                        <app-loader [lighttheme]="lighttheme" *ngIf="photos == null"></app-loader>
                         <div class="animate" *ngIf="photos?.data.length > 0">
                             <h2>my latest instagram picture</h2>
                             <div class="activity-card" [ngClass]="{'shadow': lighttheme}">
@@ -35,10 +33,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <hr *ngIf="photos?.data.length > 0">
-                        <br>
-                        <div class="loader" [ngClass]="lighttheme ? 'dark-color' : 'light-color'" *ngIf="music == null" >Loading...</div>
+                        <br><hr *ngIf="photos?.data.length > 0"><br>
+                        <app-loader [lighttheme]="lighttheme" *ngIf="music == null"></app-loader>
                         <div class="animate" *ngIf="music?.items.length > 0" >
                                 <h2>my latest song on spotify</h2>
                             <div class="activity-card"[ngClass]="{'shadow': lighttheme}">
@@ -53,7 +49,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

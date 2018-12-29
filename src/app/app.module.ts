@@ -14,11 +14,14 @@ import { globalEventManager } from './services/globalEventManager.service';
 import { InstagramService } from './services/instagram.service';
 import { SpotifyService } from './services/spotify.service';
 import { TwitterService } from './services/twitter.service';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 const appRoutes: Routes = [
   { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
   { path: '', redirectTo: '/hello', pathMatch: 'full' },
   { path: 'skills', component: SkillsComponent, data: { title: 'skills' } },
+  { path: 'portfolio', component: PortfolioComponent, data: { title: 'portfolio' } },
   { path: 'contact', component: ContactComponent, data: { title: 'contact' } },
   { path: '**', redirectTo: '/hello', pathMatch: 'full' },
 ];
@@ -31,7 +34,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     SkillsComponent,
     ContactComponent,
-    ToggleButtonComponent
+    ToggleButtonComponent,
+    PortfolioComponent,
+    LoaderComponent
   ],
   imports: [
     RouterModule.forRoot(
