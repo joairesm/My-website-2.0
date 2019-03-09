@@ -19,8 +19,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { CardComponent } from './components/card/card.component';
 
 const appRoutes: Routes = [
-  { path: 'hello', component: HomeComponent, data: { title: 'hello' } },
-  { path: '', redirectTo: '/hello', pathMatch: 'full' },
+  //{ path: 'hello', component: HomeComponent, data: { title: 'hello' } },
+  { path: '', redirectTo: '/skills', pathMatch: 'full' },
   { path: 'skills', component: SkillsComponent, data: { title: 'skills' } },
   { path: 'portfolio', component: PortfolioComponent, data: { title: 'portfolio' } },
   { path: 'contact', component: ContactComponent, data: { title: 'contact' } },

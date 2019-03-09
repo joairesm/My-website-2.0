@@ -333,3 +333,4 @@ src/app/models/model.ts
 src/assets/me-1-min.jpg
 .gitignore
 src/.DS_Store
+src/assets/avatar.GIF

@@ -7,6 +7,13 @@ $dark-action-color: #40E0D0;
     .row{
         margin: 0px;
     }
+
+    img{
+        height: 50px;
+        opacity: 0.75;
+        position: absolute;
+        top: 15px;
+    }
     .navbar{
         padding:0px;
         border-style: solid;
@@ -38,6 +45,7 @@ $dark-action-color: #40E0D0;
                 content: "/";
             }
         }
+
     }
 
     .my-controls{
@@ -63,8 +71,6 @@ $dark-action-color: #40E0D0;
             float:right;
         }
     }
-
-
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -77,6 +83,11 @@ $dark-action-color: #40E0D0;
             width: 0px;
         }
     }
+
+    .navbar{
+        margin-top: 30px;
+    }
+
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -102,6 +113,11 @@ $dark-action-color: #40E0D0;
 
 .dark-theme{
     background-color: #343a40;
+    .slash{
+        &:before{
+            color: $dark-action-color;
+        }
+    }
 
     h1{
         color: #fff;
@@ -110,6 +126,8 @@ $dark-action-color: #40E0D0;
             color: $dark-action-color;
         }
     }
+
+
     .navbar{
         border-color:black;
     }
@@ -126,12 +144,19 @@ $dark-action-color: #40E0D0;
 .light-theme{
     background-color: rgb(231, 231, 231);
 
+
+    .slash{
+        &:before{
+            color: $light-action-color;
+        }
+    }
     h1{
         color: #343a40;
         &:before{
             color: $light-action-color;
         }
     }
+
     .navbar{
         border-color:$light-action-color;
     }
