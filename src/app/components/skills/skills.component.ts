@@ -48,7 +48,7 @@ export class SkillsComponent implements OnInit {
 
     // Radar
     public radarChartLabels: string[] = [
-        'Angular', '.NET', '.NET core', 'React','Redux'];
+        'Angular', 'Vue.js', '.NET', 'React','Redux'];
 
     public radarChartColors: Array<any>;
 
